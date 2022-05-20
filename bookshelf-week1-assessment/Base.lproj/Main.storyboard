@@ -8,22 +8,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Book Table View Controller-->
         <scene sceneID="6cK-Jb-MRA">
             <objects>
-                <tableViewController id="ykr-Ad-a1B" sceneMemberID="viewController">
+                <tableViewController id="ykr-Ad-a1B" customClass="BookTableViewController" customModule="bookshelf_week1_assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="g16-ON-qey">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xqi-oP-Oag">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" id="xqi-oP-Oag">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xqi-oP-Oag" id="KdE-47-zUJ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="BookSegue" id="POP-VK-bkV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -36,20 +39,80 @@
             </objects>
             <point key="canvasLocation" x="-755" y="105"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Display View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bookshelf_week1_assessment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BookDisplayViewController" customModule="bookshelf_week1_assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Title)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZY-kO-65z">
+                                <rect key="frame" x="41.5" y="94" width="331" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Author)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcS-k4-xux">
+                                <rect key="frame" x="41.5" y="144" width="331" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rP1-9F-xth">
+                                <rect key="frame" x="41.5" y="481" width="331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="100" text="(Description)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ia-Aa-KNl">
+                                <rect key="frame" x="41.5" y="522" width="331" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Vy5-FO-glV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oAl-ul-fQW">
+                                <rect key="frame" x="99.5" y="188" width="215" height="273"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oAl-ul-fQW" secondAttribute="height" multiplier="48:61" id="7L2-GV-8jK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EZY-kO-65z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="0ht-CW-RuR"/>
+                            <constraint firstItem="2ia-Aa-KNl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3Pq-ch-N93"/>
+                            <constraint firstItem="oAl-ul-fQW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3UD-QR-2zO"/>
+                            <constraint firstItem="rP1-9F-xth" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8UZ-BN-AKs"/>
+                            <constraint firstItem="oAl-ul-fQW" firstAttribute="top" secondItem="RcS-k4-xux" secondAttribute="bottom" constant="20" id="9RR-gf-Mmu"/>
+                            <constraint firstItem="2ia-Aa-KNl" firstAttribute="top" secondItem="rP1-9F-xth" secondAttribute="bottom" constant="20" id="CwB-od-Oam"/>
+                            <constraint firstItem="rP1-9F-xth" firstAttribute="top" secondItem="oAl-ul-fQW" secondAttribute="bottom" constant="20" id="EcS-cD-KKL"/>
+                            <constraint firstItem="EZY-kO-65z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ibo-p8-KTm"/>
+                            <constraint firstItem="RcS-k4-xux" firstAttribute="top" secondItem="EZY-kO-65z" secondAttribute="bottom" constant="20" id="Jpp-xF-nAI"/>
+                            <constraint firstItem="EZY-kO-65z" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="WCl-cs-WeZ"/>
+                            <constraint firstItem="rP1-9F-xth" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="ag3-EV-f9J"/>
+                            <constraint firstItem="2ia-Aa-KNl" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="gFA-SM-eDu"/>
+                            <constraint firstItem="RcS-k4-xux" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sIg-6v-EBw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2ia-Aa-KNl" secondAttribute="bottom" constant="20" id="xeI-74-fQP"/>
+                            <constraint firstItem="RcS-k4-xux" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="zsC-j3-yas"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="knD-YV-e34"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="RcS-k4-xux" id="rsi-SC-PFz"/>
+                        <outlet property="bookImage" destination="oAl-ul-fQW" id="2ZT-V8-H8Z"/>
+                        <outlet property="descriptionLabel" destination="2ia-Aa-KNl" id="WZh-9D-usF"/>
+                        <outlet property="releaseYearLabel" destination="rP1-9F-xth" id="yfQ-D8-9n6"/>
+                        <outlet property="titleLabel" destination="EZY-kO-65z" id="J69-4g-nup"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="94"/>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
     </scenes>
     <resources>

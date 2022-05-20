@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+class Book {
+  
+    
+    let title: String
+    let author: String
+    let coverImage: String
+    let releaseYear: Int
+    let description: String
+    
+    init(title: String, author: String, coverImage: String, releaseYear: Int, description: String) {
+        self.title = title
+        self.author = author
+        self.coverImage = coverImage
+        self.releaseYear = releaseYear
+        self.description = description
+    }
+}

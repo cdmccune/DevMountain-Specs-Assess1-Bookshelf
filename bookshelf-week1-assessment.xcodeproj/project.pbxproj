@@ -9,21 +9,19 @@
 /* Begin PBXBuildFile section */
 		2470A3342837EF680024021E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470A3332837EF680024021E /* AppDelegate.swift */; };
 		2470A3362837EF680024021E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470A3352837EF680024021E /* SceneDelegate.swift */; };
-		2470A3382837EF680024021E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470A3372837EF680024021E /* ViewController.swift */; };
 		2470A33B2837EF680024021E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2470A3392837EF680024021E /* Main.storyboard */; };
 		2470A33D2837EF6B0024021E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2470A33C2837EF6B0024021E /* Assets.xcassets */; };
 		2470A3402837EF6B0024021E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2470A33E2837EF6B0024021E /* LaunchScreen.storyboard */; };
 		2470A34A2837EFD80024021E /* BookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470A3492837EFD80024021E /* BookController.swift */; };
 		2470A34C2837F0230024021E /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470A34B2837F0230024021E /* BookTableViewController.swift */; };
 		2470A34E2837F0460024021E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470A34D2837F0460024021E /* Book.swift */; };
-		2470A3502837F0920024021E /* BookDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470A34F2837F0920024021E /* BookDisplayViewController.swift */; };
+		2470A3522838053D0024021E /* BookDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470A3512838053D0024021E /* BookDisplayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2470A3302837EF680024021E /* bookshelf-week1-assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bookshelf-week1-assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2470A3332837EF680024021E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2470A3352837EF680024021E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2470A3372837EF680024021E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2470A33A2837EF680024021E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2470A33C2837EF6B0024021E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2470A33F2837EF6B0024021E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,7 +29,7 @@
 		2470A3492837EFD80024021E /* BookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookController.swift; sourceTree = "<group>"; };
 		2470A34B2837F0230024021E /* BookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
 		2470A34D2837F0460024021E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		2470A34F2837F0920024021E /* BookDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDisplayViewController.swift; sourceTree = "<group>"; };
+		2470A3512838053D0024021E /* BookDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDisplayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 			children = (
 				2470A3332837EF680024021E /* AppDelegate.swift */,
 				2470A3352837EF680024021E /* SceneDelegate.swift */,
-				2470A3372837EF680024021E /* ViewController.swift */,
 				2470A3392837EF680024021E /* Main.storyboard */,
 				2470A33C2837EF6B0024021E /* Assets.xcassets */,
 				2470A33E2837EF6B0024021E /* LaunchScreen.storyboard */,
@@ -74,7 +71,7 @@
 				2470A3492837EFD80024021E /* BookController.swift */,
 				2470A34B2837F0230024021E /* BookTableViewController.swift */,
 				2470A34D2837F0460024021E /* Book.swift */,
-				2470A34F2837F0920024021E /* BookDisplayViewController.swift */,
+				2470A3512838053D0024021E /* BookDisplayViewController.swift */,
 			);
 			path = "bookshelf-week1-assessment";
 			sourceTree = "<group>";
@@ -150,9 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2470A3522838053D0024021E /* BookDisplayViewController.swift in Sources */,
 				2470A34A2837EFD80024021E /* BookController.swift in Sources */,
-				2470A3502837F0920024021E /* BookDisplayViewController.swift in Sources */,
-				2470A3382837EF680024021E /* ViewController.swift in Sources */,
 				2470A34E2837F0460024021E /* Book.swift in Sources */,
 				2470A3342837EF680024021E /* AppDelegate.swift in Sources */,
 				2470A34C2837F0230024021E /* BookTableViewController.swift in Sources */,

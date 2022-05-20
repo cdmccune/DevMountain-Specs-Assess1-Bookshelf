@@ -8,38 +8,47 @@
 import UIKit
 
 class BookTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return BookController.books.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
 
-        // Configure the cell...
-
+        var content = cell.defaultContentConfiguration()
+        content.text = BookController.books[indexPath.row].title
+        content.secondaryText = BookController.books[indexPath.row].author
+//        content.image = UIImage(named: BookController.books[indexPath.row])
+        cell.contentConfiguration = content
         return cell
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "BookSegue" {
+            if let bookIndex = tableView.indexPathForSelectedRow {
+                if let bookDetailVC = segue.destination as? BookDisplayViewController {
+                    let book = BookController.books[bookIndex.row]
+                    bookDetailVC.book = book
+                    print("hi")
+            }
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -86,4 +95,5 @@ class BookTableViewController: UITableViewController {
     }
     */
 
+}
 }
