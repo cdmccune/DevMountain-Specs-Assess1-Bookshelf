@@ -13,10 +13,10 @@ class Book {
     let title: String
     let author: String
     let coverImage: String
-    let releaseYear: Int
+    let releaseYear: DateComponents
     let description: String
     
-    init(genre: String, title: String, author: String, coverImage: String, releaseYear: Int, description: String) {
+    init(genre: String, title: String, author: String, coverImage: String, releaseYear: DateComponents, description: String) {
         self.title = title
         self.author = author
         self.coverImage = coverImage
