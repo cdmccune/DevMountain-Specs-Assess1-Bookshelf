@@ -11,9 +11,15 @@ class BookTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Book List"
     }
 
+    // MARK: - Change Style of Table
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Leisure Reading"
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -25,6 +31,8 @@ class BookTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return BookController.books.count
     }
+    
+    
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -18,6 +18,7 @@ class BookDisplayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         updateViews()
         // Do any additional setup after loading the view.
     }
