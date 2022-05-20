@@ -49,31 +49,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Title)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZY-kO-65z">
-                                <rect key="frame" x="41.5" y="98" width="331" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <rect key="frame" x="23" y="98" width="368" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Author)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcS-k4-xux">
-                                <rect key="frame" x="41.5" y="148" width="331" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="41.5" y="138.5" width="331" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rP1-9F-xth">
-                                <rect key="frame" x="41.5" y="505" width="331" height="21"/>
+                                <rect key="frame" x="41.5" y="491" width="331" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="100" text="(Description)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ia-Aa-KNl">
-                                <rect key="frame" x="41.5" y="546" width="331" height="296"/>
+                                <rect key="frame" x="41.5" y="532" width="331" height="310"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oAl-ul-fQW">
-                                <rect key="frame" x="108.5" y="192" width="197" height="293"/>
+                                <rect key="frame" x="108.5" y="178" width="197" height="293"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oAl-ul-fQW" secondAttribute="height" multiplier="41:61" id="7L2-GV-8jK"/>
                                     <constraint firstAttribute="height" constant="293" id="CNe-e6-0C4"/>
@@ -92,7 +92,7 @@
                             <constraint firstItem="rP1-9F-xth" firstAttribute="top" secondItem="oAl-ul-fQW" secondAttribute="bottom" constant="20" id="EcS-cD-KKL"/>
                             <constraint firstItem="EZY-kO-65z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ibo-p8-KTm"/>
                             <constraint firstItem="RcS-k4-xux" firstAttribute="top" secondItem="EZY-kO-65z" secondAttribute="bottom" constant="20" id="Jpp-xF-nAI"/>
-                            <constraint firstItem="EZY-kO-65z" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="WCl-cs-WeZ"/>
+                            <constraint firstItem="EZY-kO-65z" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.89" id="WCl-cs-WeZ"/>
                             <constraint firstItem="rP1-9F-xth" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="ag3-EV-f9J"/>
                             <constraint firstItem="2ia-Aa-KNl" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="gFA-SM-eDu"/>
                             <constraint firstItem="RcS-k4-xux" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sIg-6v-EBw"/>

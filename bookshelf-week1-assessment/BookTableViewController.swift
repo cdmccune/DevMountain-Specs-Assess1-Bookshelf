@@ -16,9 +16,24 @@ class BookTableViewController: UITableViewController {
 
     // MARK: - Change Style of Table
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return BookController.books[section][0].genre
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return BookController.books[section][0].genre
+//    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        let view = UIView(frame: CGRect(x: 15, y: 0, width: tableView.frame.width, height: 40))
+        view.backgroundColor = .lightGray
+        let lbl = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.frame.width-15, height: 40))
+        lbl.text = BookController.books[section][0].genre
+        view.addSubview(lbl)
+        return view
     }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+
     
     // MARK: - Table view data source
 
