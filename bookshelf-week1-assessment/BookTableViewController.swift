@@ -17,19 +17,17 @@ class BookTableViewController: UITableViewController {
     // MARK: - Change Style of Table
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Leisure Reading"
+        return BookController.books[section][0].genre
     }
     
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        return BookController.books.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return BookController.books.count
+        return BookController.books[section].count
     }
     
     
@@ -39,8 +37,8 @@ class BookTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
 
         var content = cell.defaultContentConfiguration()
-        content.text = BookController.books[indexPath.row].title
-        content.secondaryText = BookController.books[indexPath.row].author
+        content.text = BookController.books[indexPath.section][indexPath.row].title
+        content.secondaryText = BookController.books[indexPath.section][indexPath.row].author
 //        content.image = UIImage(named: BookController.books[indexPath.row])
         cell.contentConfiguration = content
         return cell
@@ -50,9 +48,8 @@ class BookTableViewController: UITableViewController {
         if segue.identifier == "BookSegue" {
             if let bookIndex = tableView.indexPathForSelectedRow {
                 if let bookDetailVC = segue.destination as? BookDisplayViewController {
-                    let book = BookController.books[bookIndex.row]
+                    let book = BookController.books[bookIndex.section][bookIndex.row]
                     bookDetailVC.book = book
-                    print("hi")
             }
         }
     }
